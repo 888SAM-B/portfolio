@@ -1,35 +1,69 @@
+:root{
+  --c1:#ff3e3e;
+}
+*{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 html{
     scroll-behavior:smooth;
-     font-family: "Roboto", sans-serif;
-      font-weight: 500;
-      font-style: normal;
     }
     
-    nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    }
-    .navitems{
-    width:50%;
-    display:flex;
+.navbar {
+      z-index: 1000; /* Higher to ensure it's above other elements */
+      position: sticky;
+      top: 0; /* Position it at the top of the viewport */
+      border-bottom: 1px solid var(--c1);
+}
+  
+  .navbar *{
+      color: var(--c1);
+  }
+  .navbar *:hover{
+      color: var(--c3);
+  }
+  .sep *{
+      display: flex;
+  }
+  .items{
+    width: 100%;
+    display: flex;
     justify-content:space-around;
-    }
-    nav h2{
-    font-size:30px;
-    }
+}
+h2{
+  margin-left: 10px;
+}
+  .logo{
+      font-size: 28px;
+      font-weight: bolder;
+      padding-left: 8px;
+      padding-right:30px;
+      width: 100%;
+  }
+  .items a:hover{
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
     .content h1{
     font-size:40px;
+    font-weight: bolder;
+    }
+    .content h3{
+      font-size: 20px;
     }
     #home{
     display:flex;
     width:100%;
+    flex-wrap: wrap;
     height:88vh;
     align-items:center;
     justify-content:space-around;
     background-image:linear-gradient( #FFF ,#d9d9d9);
     }
+    .content{
+      margin: 10px;
+    }
     .accounts{
+      margin-top: 20px;
     display:flex;
     width:100%;
     }
@@ -37,15 +71,105 @@ html{
     margin-right:100px;
     }
     .img{
+      width: 100%;
+      height: 90vh;
+      background-image: linear-gradient(to bottom, #212121, #0000003e, #212121), 
+      url("./assets/bg16.5.webp"); 
+      background-position: center;
+      
+  }
+  .img-content{
+      height: 88vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      font-size: 50px;
+  }
+  
+  .previous-works{
+      width: 100%;
+      margin-top: 70px;
+      margin-bottom: 50px;
+  }
+  .previous-works-images{
+      margin-top: 20PX;
+      width: 100%;
+      top: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+  .container-animate{
+      width: 90%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      border-radius: 30px;
+  }
+  .img-animate{
+      width: 400px;
+      height: 300px;
+      background-position: center;
+      background-size: cover;
+      margin: 30px;
+      cursor: pointer;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .img-animate h2{
+      opacity: 0;
+      color: aliceblue;
+      margin: 0px;
+      transition: all 1s;
+  }
+  .img-animate:hover h2{
+              opacity: 1;
+          }
+  .img-animate:hover{
+      padding: 1%;
+      color: aliceblue;
+  }
+  .netflix{
+      background-image: url("https://images.ctfassets.net/y2ske730sjqp/5QQ9SVIdc1tmkqrtFnG9U1/de758bba0f65dcc1c6bc1f31f161003d/BrandAssets_Logos_02-NSymbol.jpg?w=940");
+      background-size: contain;
+      background-position: center;
+  }
+  .weather{
+      background-image: url("./WEATHER_PNG.png");
+  }
+  .ai{
+      background-image: url("./AI.png");
+  }
+  .calculator{
+      background-image: url("./CALCULATOR.png");
+  }
+  
+  .netflix:hover{
+      background-image: linear-gradient(to bottom, #212121, #0000003e, #212121), url("https://media.licdn.com/dms/image/v2/D5622AQHnHEEdCWP-1g/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1702592591295?e=2147483647&v=beta&t=sbruJUqRk2cZI8sNnuOJrrgsJetDrO-TcjwxRuTDjcI");
+  }
+  .weather:hover{
+      background-image: linear-gradient(to bottom, #212121, #0000003e, #212121), url("https://i.pinimg.com/originals/0e/f3/bb/0ef3bb66d9216fffcea9022628f7bb26.gif");
+  }
+  .ai:hover{
+      background-image: linear-gradient(to bottom, #212121, #0000003e, #212121), url("https://cdn.dribbble.com/users/1523313/screenshots/16134521/media/3975730626bdae63cf9b25d3b634bac3.gif");
+  }
+  .calculator:hover{
+      background-image: linear-gradient(to bottom, #212121, #0000003e, #212121), url("https://cdn.dribbble.com/users/470545/screenshots/3471475/calculater.gif");
+  }   
+    .img1{
     position:absolute;
     border-radius:80% 20% 80% 20%;
     height:200px;
     width:100%;
     bottom:12px;
-    background-color:red;
+    background-color:var(--c1);
     }
     .imgs img{
-    filter:drop-shadow(5px 0px 10px red);
+    filter:drop-shadow(5px 0px 10px var(--c1));
     transition:transform 0.3s;
     cursor:pointer;
     transition:transform 0.3s ease-in-out;
@@ -55,38 +179,10 @@ html{
     }
     a{
     text-decoration:none;
-    color:red;
-    }
-    
-    
-    #projects{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:space-around;
-    }
-    .pro-contents{
-    width:30%;
-    height:300px;
-    text-align:center;
-    margin:10px;
-    transition:transform 0.5s ;
-    }
-    .pro-contents a img{ 	
-    width:60%;
-    height:70%;
-    }
-    
-    #pro-start h2{
-    color:red;
-    }
-    a{
-    font-size:20px;
-    }
-    a:hover{
-    border-bottom:1px solid red;
+    color:var(--c1);
     }
     footer{
-    background-color:red;
+    background-color:var(--c1);
     position:relative;
     padding:0px;
     margin:0px;
@@ -96,22 +192,25 @@ html{
     align-items:center;
     justify-content:center;
     }
-    footer a{
-    color:black;
-    }
-    #pro-start h2{
-    font-size:40px;
-    }
-    .pro-contents a h3{
-    color:black;
-    }
-    #wait{
-      display: none;
-    }
-    *{
-    flex-wrap:wrap;
-    }
-    .pro-contents:hover{
-    transform: scale(1.1);
+    footer *{
+      color: #000;
+      font-size: 20px;
     }
     
+    @media screen and (max-width:991px) {
+      .mob{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+      }
+      .mob button{
+          display: flex;
+          width: 20%;
+          align-items: end;
+          justify-content: center;
+      }
+      button span{
+          font-size: 30px;
+      }
+    }
