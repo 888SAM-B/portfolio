@@ -1,0 +1,117 @@
+html{
+    scroll-behavior:smooth;
+     font-family: "Roboto", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+    }
+    
+    nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    }
+    .navitems{
+    width:50%;
+    display:flex;
+    justify-content:space-around;
+    }
+    nav h2{
+    font-size:30px;
+    }
+    .content h1{
+    font-size:40px;
+    }
+    #home{
+    display:flex;
+    width:100%;
+    height:88vh;
+    align-items:center;
+    justify-content:space-around;
+    background-image:linear-gradient( #FFF ,#d9d9d9);
+    }
+    .accounts{
+    display:flex;
+    width:100%;
+    }
+    .accounts a{
+    margin-right:100px;
+    }
+    .img{
+    position:absolute;
+    border-radius:80% 20% 80% 20%;
+    height:200px;
+    width:100%;
+    bottom:12px;
+    background-color:red;
+    }
+    .imgs img{
+    filter:drop-shadow(5px 0px 10px red);
+    transition:transform 0.3s;
+    cursor:pointer;
+    transition:transform 0.3s ease-in-out;
+    }
+    .imgs img:hover{
+    transform:scale(1.1);
+    }
+    a{
+    text-decoration:none;
+    color:red;
+    }
+    
+    
+    #projects{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    }
+    .pro-contents{
+    width:30%;
+    height:300px;
+    text-align:center;
+    margin:10px;
+    transition:transform 0.5s ;
+    }
+    .pro-contents a img{ 	
+    width:60%;
+    height:70%;
+    }
+    
+    #pro-start h2{
+    color:red;
+    }
+    a{
+    font-size:20px;
+    }
+    a:hover{
+    border-bottom:1px solid red;
+    }
+    footer{
+    background-color:red;
+    position:relative;
+    padding:0px;
+    margin:0px;
+    bottom:0px;
+    height:50px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    }
+    footer a{
+    color:black;
+    }
+    #pro-start h2{
+    font-size:40px;
+    }
+    .pro-contents a h3{
+    color:black;
+    }
+    #wait{
+      display: none;
+    }
+    *{
+    flex-wrap:wrap;
+    }
+    .pro-contents:hover{
+    transform: scale(1.1);
+    }
+    
