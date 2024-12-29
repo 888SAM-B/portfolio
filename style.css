@@ -19,7 +19,8 @@ body {
 .navbar {
   z-index: 1000;
   /* Higher to ensure it's above other elements */
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   /* Position it at the top of the viewport */
   border-bottom: 1px solid var(--c1);
@@ -62,6 +63,7 @@ h2 {
 }
 
 .content h1 {
+  position: relative;
   font-size: 40px;
   font-weight: bolder;
 }
@@ -76,7 +78,7 @@ h2 {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
-  height: 88vh;
+  height: 100dvh;
   align-items: center;
   justify-content: space-around;
   background-image: linear-gradient(#FFF, #d9d9d9);
@@ -85,8 +87,8 @@ h2 {
 .content {
   /* padding: 10px; */
   position: relative;
-
-  width: 60%;
+  top: 70px;
+  width: 50%;
 }
 
 .accounts {
@@ -237,7 +239,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 50px;
+  padding: 30px;
 }
 
 footer * {
@@ -284,3 +286,6 @@ footer * {
     margin-right: 5%;
   }
 }
+/* *{
+  border: 1px solid black;
+} */
